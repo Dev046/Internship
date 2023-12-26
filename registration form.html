@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Registration form</title>
+  <style>
+    .table {
+      width: 60%;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+    }
+  </style>
+  <script>
+    function validate() {
+      var name = document.getElementById("inp")
+      if (name.value.trim() == "") {
+        alert("Please fill the form");
+        return false;
+      }
+      else {
+        true;
+      }
+    }
+  </script>
+</head>
+<body>
+  <main>
+    <h1>Registration Form </h1>
+    <div class="table">
+      <form onsubmit="return validate()" action="msg.html">
+
+        <label for="userid">User id</label>
+        <input id="inp" type="text" required name="userid">
+
+        <label for="password">Password</label>
+        <input id="inp" type="password" required name="password">
+
+        <label for="name">Name</label>
+        <input id="inp" type="text" required>
+
+        <label for="address">Address</label>
+        <input id="inp" type="text" required>
+
+        <label for="pin code">Pin Code</label>
+        <input id="inp" type="number" required>
+
+        <label for="email">Email id </label>
+        <input id="inp" type="email" required>
+        <div>
+          <fieldset style="border: 1px solid rgb(209, 209, 209); border-radius: 5px;">
+            <legend>Gender:</legend>
+            <div>
+              <input style="margin: 0px;" type="radio" id="gender" name="gender" value="gender" />
+              <label for="Male">Male</label>
+              <input style="margin: 0px; margin-left: 20px;" type="radio" id="gender" name="gender" value="gender" />
+              <label for="Female">Female</label>
+
+            </div>
+          </fieldset>
+        </br>
+          <label for="Message">Write about yourself (optional) </label>
+          <textarea id="Message" style="height:200px"></textarea>
+          <input type="submit" value="Submit">
+      </form>
+    </div>
+  </main>
+</body>
+</html>
